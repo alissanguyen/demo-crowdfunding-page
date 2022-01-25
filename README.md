@@ -1,6 +1,6 @@
 # Frontend Mentor - Crowdfunding Product Page
 
-![Design](./images/desktop-preview.jpg)
+![Design](.src/images/desktop-preview.jpg)
 
 ## Usage
 

@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from "react";
+import "./css/main.min.css";
+import Header from "./components/Header";
+import MainSection from "./components/MainSection/MainSection";
+import Footer from "./components/Footer";
+import Modal from "./components/Modal/Modal";
 
 function App() {
+  React.useEffect(() => {
+    const script = document.createElement("script");
+
+    script.src = "https://crowdfund.alissanguyen.dev/js/script.js";
+    script.async = true;
+
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div class="overlay overlay--hidden"></div>
+      <Header />
+      <MainSection />
+      <Footer />
+      <Modal />
     </div>
   );
 }
