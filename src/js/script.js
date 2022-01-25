@@ -231,7 +231,7 @@ function closeModal() {
 });
 // close modals by pressing "escape" key
 document.addEventListener("keydown", (event) => {
-  if (event.key == "Escape" && overlay.classList.contains("overlay--modal")) {
+  if (event.key === "Escape" && overlay.classList.contains("overlay--modal")) {
     closeModal();
   }
 });
@@ -252,7 +252,7 @@ pledgeForms.forEach((form) => {
     e.preventDefault();
 
     // decrement remaining selected reward by one (if applicable) and update DOM
-    if (form.dataset.group != "noreward") {
+    if (form.dataset.group !== "noreward") {
       updateReward(form);
     }
 
