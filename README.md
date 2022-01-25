@@ -1,4 +1,4 @@
-# Frontend Mentor - Crowdfunding Product Page
+# Crowdfunding Product Page
 
 URL https://crowdfund.alissanguyen.dev
 
