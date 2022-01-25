@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer class="attribution">
+    <footer className="attribution">
       <p>This is a demo website, do not attempt to give real money.</p>
       <p>
         {" "}

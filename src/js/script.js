@@ -12,7 +12,9 @@ function overlayClose() {
 }
 
 // close mobile menu and modals when clicking on the overlay
-overlay.addEventListener("click", overlayClose);
+if (overlay) {
+  overlay.addEventListener("click", overlayClose);
+}
 
 //////////////////
 // Mobile Menu //
@@ -36,8 +38,9 @@ function toggleMenu() {
     btnMenu.setAttribute("aria-expanded", "true");
   }
 }
-
-btnMenu.addEventListener("click", toggleMenu);
+if (btnMenu) {
+  btnMenu.addEventListener("click", toggleMenu);
+}
 
 //////////////////////
 // Bookmark Button //
@@ -54,8 +57,9 @@ function bookmarkProject() {
     bookmark.setAttribute("aria-pressed", "false");
   }
 }
-
-bookmark.addEventListener("click", bookmarkProject);
+if (bookmark) {
+  bookmark.addEventListener("click", bookmarkProject);
+}
 
 /////////////
 // Modals //
@@ -108,7 +112,9 @@ function openModal(triggerbtn) {
   modalSelection.focus();
 
   // focus trap
-  modalSelection.addEventListener("keydown", tabTrapKey);
+  if (modalSelection) {
+    modalSelection.addEventListener("keydown", tabTrapKey);
+  }
 
   const focusableElementsString =
     "a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]";
@@ -227,7 +233,9 @@ function closeModal() {
 
 // close modals by pressing close buttons
 [btnCloseModal, btnCloseSuccess].forEach((btn) => {
-  btn.addEventListener("click", closeModal);
+  if (btn) {
+    btn.addEventListener("click", closeModal);
+  }
 });
 // close modals by pressing "escape" key
 document.addEventListener("keydown", (event) => {
@@ -236,13 +244,15 @@ document.addEventListener("keydown", (event) => {
   }
 });
 // close modals if clicking outside them
-modalContainer.addEventListener("click", (e) => {
-  if (e.target !== e.currentTarget) {
-    return;
-  } else {
-    closeModal();
-  }
-});
+if (modalContainer) {
+  modalContainer.addEventListener("click", (e) => {
+    if (e.target !== e.currentTarget) {
+      return;
+    } else {
+      closeModal();
+    }
+  });
+}
 
 ////////////////////////
 // Submitting a Pledge

@@ -2,6 +2,7 @@ import Reward from "./Reward";
 const Rewards = () => {
   const rewards = [
     {
+      id: 0,
       class: "reward",
       heading: "Bamboo Stand",
       requirement: "Pledge $25 or more",
@@ -15,6 +16,7 @@ const Rewards = () => {
       ariaLabel: "open modal and select bamboo stand reward",
     },
     {
+      id: 2,
       class: "reward",
       heading: "Black Edition Stand",
       requirement: "Pledge $75 or more",
@@ -28,6 +30,7 @@ const Rewards = () => {
       ariaLabel: "open modal and select black stand reward",
     },
     {
+      id: 3,
       class: "reward reward--unavailable",
       heading: "Mahogany Special Edition",
       requirement: "Pledge $200 or more",
@@ -42,9 +45,9 @@ const Rewards = () => {
     },
   ];
   return (
-    <div class="about__rewards">
+    <div className="about__rewards">
       {rewards.map((reward) => (
-        <Reward reward={reward} />
+        <Reward reward={reward} key={reward.id} />
       ))}
     </div>
   );

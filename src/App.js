@@ -9,7 +9,7 @@ function App() {
   React.useEffect(() => {
     const script = document.createElement("script");
 
-    script.src = "https://crowdfund.alissanguyen.dev/js/script.js";
+    script.src = "./js/script.js";
     script.async = true;
 
     document.body.appendChild(script);
@@ -20,7 +20,7 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <div class="overlay overlay--hidden"></div>
+      <div className="overlay overlay--hidden"></div>
       <Header />
       <MainSection />
       <Footer />

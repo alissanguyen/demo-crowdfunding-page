@@ -15,7 +15,10 @@ const MainContainer = (props) => {
   const pledgeData = props.pledge.main;
   return (
     <div className={pledgeData.divClass}>
-      <label for={pledgeData.inputId} className="pledge__header radio__label">
+      <label
+        htmlFor={pledgeData.inputId}
+        className="pledge__header radio__label"
+      >
         <input
           className="radio__input"
           type="radio"
@@ -27,7 +30,7 @@ const MainContainer = (props) => {
         <div className="pledge__header-text">
           <h3 className="heading heading--pledge">{pledgeData.text}</h3>
           {pledgeData.requirement ? (
-            <p class="paragraph paragraph--pledge-requirement">
+            <p className="paragraph paragraph--pledge-requirement">
               Pledge $25 or more
             </p>
           ) : null}
@@ -37,10 +40,10 @@ const MainContainer = (props) => {
         <p className="paragraph paragraph--modal">{pledgeData.description}</p>
       </div>
       {pledgeData.footer ? (
-        <div class="pledge__footer">
-          <div class="pledge__footer-text">
-            <p class={pledgeData.footerClass}>{pledgeData.footer}</p>
-            <p class="paragraph">left</p>
+        <div className="pledge__footer">
+          <div className="pledge__footer-text">
+            <p className={pledgeData.footerClass}>{pledgeData.footer}</p>
+            <p className="paragraph">left</p>
           </div>
         </div>
       ) : null}
@@ -59,7 +62,7 @@ const FormContainer = (props) => {
       >
         <p className="paragraph paragraph--form">Enter your pledge</p>
         <div className="pledge__form-inputs">
-          <label for={pledgeData.inputId} className="amount__label">
+          <label htmlFor={pledgeData.inputId} className="amount__label">
             <span>$</span>
             <input
               className="amount__input"

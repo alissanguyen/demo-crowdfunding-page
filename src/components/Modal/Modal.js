@@ -6,7 +6,7 @@ const Modal = () => {
   return (
     <div className="modal-container hidden display-none">
       <div
-        tabindex="-1"
+        tabIndex="-1"
         className="modal modal--selection"
         role="dialog"
         aria-label="back this project"
@@ -16,7 +16,7 @@ const Modal = () => {
         <ModalPledges />
       </div>
       <div
-        tabindex="-1"
+        tabIndex="-1"
         className="modal modal--success hidden section"
         role="dialog"
         aria-label="pledge submission confirmation"

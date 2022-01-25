@@ -1,8 +1,13 @@
 # Frontend Mentor - Crowdfunding Product Page
 
-![Design](.src/images/desktop-preview.jpg)
+URL https://crowdfund.alissanguyen.dev
 
-## Usage
+A demo landing page for crowdfunding projects.
+
+## What to expect
+![Design](./src/images/desktop-preview.jpg)
+
+### Usage
 
 Users should be able to:
 

@@ -33,7 +33,7 @@ const Header = () => {
       </div>
       <div className="header__hero">
         <picture>
-          <source media="(min-width: 800px)" srcset={HeroImageLg} />
+          <source media="(min-width: 800px)" srcSet={HeroImageLg} />
           <img src={HeroImageSm} alt="" />
         </picture>
       </div>

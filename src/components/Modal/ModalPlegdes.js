@@ -3,6 +3,7 @@ import Pledge from "./Pledge";
 const ModalPledges = () => {
   const pledges = [
     {
+      id: 0,
       divClass: "pledge",
       pledgeId: "modalPledge--noreward",
       main: {
@@ -24,6 +25,7 @@ const ModalPledges = () => {
       },
     },
     {
+      id: 1,
       divClass: "pledge",
       pledgeId: "modalPledge--bamboo",
       main: {
@@ -46,6 +48,7 @@ const ModalPledges = () => {
       },
     },
     {
+      id: 2,
       divClass: "pledge",
       pledgeId: "modalPledge--black",
       main: {
@@ -68,6 +71,7 @@ const ModalPledges = () => {
       },
     },
     {
+      id: 3,
       divClass: "pledge pledge--unavailable",
       pledgeId: "modalPledge--mahogany",
       main: {
@@ -93,7 +97,7 @@ const ModalPledges = () => {
   return (
     <div className="modal__pledge-selection">
       {pledges.map((pledge) => (
-        <Pledge pledge={pledge} />
+        <Pledge pledge={pledge} key={pledge.id} />
       ))}
     </div>
   );
