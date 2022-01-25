@@ -72,7 +72,7 @@ const FormContainer = (props) => {
               }
               id={pledgeData.inputId}
               min={pledgeData.min}
-              value={pledgeData.val}
+              defaultValue={pledgeData.val}
               required
             />
           </label>
