@@ -7,14 +7,7 @@ import Modal from "./components/Modal/Modal";
 
 function App() {
   React.useEffect(() => {
-    const script = document.createElement("script");
-
-    script.src = "https://crowdfund.alissanguyen.dev/src/js/script.js";
-    script.async = true;
-
-    document.body.appendChild(script);
-
-    return;
+    window.__initializeWindowEvents__();
   }, []);
 
   return (
